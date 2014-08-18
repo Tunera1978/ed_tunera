@@ -112,7 +112,7 @@ public class EwertonGoncalves {
 
         System.out.println("Muito Bem! Agora que você cadastrou os nomes, digite uma letra");
 
-        System.out.println("Muito Bem! Agora que você cadastrou os nomes, digite uma letra");
+        System.out.println("Digite um nome para excluir ! ");
         
         if (!arr.buscar(entrada.nextLine())) {
             System.out.println("Não Encontrei!!!");
