@@ -112,12 +112,14 @@ public class e1 {
 
         System.out.println("Muito Bem! Agora que você cadastrou os nomes, digite uma letra");
 
-        System.out.println("Digite um nome para excluir ! ");
-        
+       
+
         if (!arr.buscar(entrada.nextLine())) {
             System.out.println("Não Encontrei!!!");
         }
 
+         System.out.println("Digite um nome para excluir ! ");
+         
         if (!arr.deletar(entrada.nextLine())) {
             System.out.println("Não Encontrei!!!");
         } else {
