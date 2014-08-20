@@ -9,6 +9,6 @@ public class Funcionario {
     
     public void calcularSalarioTotal(){
         double salarioTotal = salario +(horasExtras * 10);
-        System.out.println(salarioTotal);
+        System.out.println(nome+" : R$ "+salarioTotal);
     }
 }
