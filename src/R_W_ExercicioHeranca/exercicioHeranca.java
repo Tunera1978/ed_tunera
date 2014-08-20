@@ -16,18 +16,14 @@ public class exercicioHeranca {
         c.marca = "Fiat";
         c.modelo = "Siena";
         c.quantCombustivel = 50;
-        int distancia = 28;
-        int velocidade = 90;        
-        c.andar(distancia, velocidade);
+        c.andar(100, 100);
         
         Moto m = new Moto();
         m.marca = "Kawazaki";
         m.modelo = "Ninja";
         m.quantCombustivel = 30;
         
-        distancia = 50;
-        velocidade = 120;
-        m.andar(distancia, velocidade);
+        m.andar(50, 120);
         
         
     }
