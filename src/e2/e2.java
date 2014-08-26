@@ -1,12 +1,14 @@
 package e2;
 
-class VetorOrdenado {
+import java.util.Arrays;
+
+class EstruturaE2 {
 
     private String[] a; // cria a referência a para um vetor long
     private int nElems;               // variavel para controlar o numero de elementos
     //-----------------------------------------------------------
 
-    public VetorOrdenado(int max) // metodo construtor
+    public EstruturaE2(int max) // metodo construtor
     {
         a = new String[max];             // cria o array
         nElems = 0;
@@ -81,16 +83,18 @@ class VetorOrdenado {
         int j;
         for (j = 0; j < nElems; j++) // localiza onde esse elemento se encaixa
         {
-            if (a[j].equals(value)) // OBS: Usando aqui busca linear!!! Poderia ser binária!
+            //if (a[j].equals(value)) // OBS: Usando aqui busca linear!!! Poderia ser binária!
+            if (a[j].compareTo(value) > 0) // OBS: Usando aqui busca linear!!! Poderia ser binária!
             {
                 break;
             }
         }
         for (int k = nElems; k > j; k--) // move os elementos maiores uma posição p/ frente
-        {
-            a[k] = a[k - 1];
-        }
-        a[j] = value;                  // insere o elemento na posição necessária
+         {
+         a[k] = a[k - 1];
+         } 
+        a[j] = value;                  // insere o elemento na posição necessária */
+        //Arrays.sort(a);
         nElems++;                      // incrementa a variavel de controle de tamanho
     }  // finaliza o método de inserção
     //--------------------------------------------------------------
@@ -123,18 +127,18 @@ class VetorOrdenado {
         System.out.println("");
     }
     //-----------------------------------------------------------
-}  // fim da classe VetorOrdenado
+}  // fim da classe EstruturaE2
 ////////////////////////////////////////////////////////////////
 //--------------------------------------------------------------
 //Começamos aqui a classe AppOrdenada! Aquela que usará nossa nova Estrutura de Dados
 //--------------------------------------------------------------
 
 public class e2 {
-    
+
     public static void main(String[] args) {
         int maxSize = 100;             // coloca em uma constante o tamanho do vetor
-        VetorOrdenado arr;                  // criar referência para a estrutura de dados
-        arr = new VetorOrdenado(maxSize);   // instancia a estrutura de dados
+        EstruturaE2 arr;                  // criar referência para a estrutura de dados
+        arr = new EstruturaE2(maxSize);   // instancia a estrutura de dados
 
         arr.insert("eu");                // insere 10 itens
         arr.insert("tu");
@@ -147,20 +151,21 @@ public class e2 {
         arr.insert("tunera");
         arr.insert("leandro");
 
-        arr.find("eu");
+        //arr.find("eles");
         arr.findAll("e");
-        /*int searchKey = "t";            // buscar pelo item 55
+
+        String searchKey = "eles";            // buscar pelo item 55
         if (arr.find(searchKey) != arr.size()) {
             System.out.println("Encontrei o item " + searchKey);
         } else {
             System.out.println("Não encontrei o item " + searchKey);
-        }*/
+        }
 
         arr.display();                 // mostra o item
 
         arr.delete("leandro");                // deleta 3 itens
         arr.delete("eu");
-        arr.delete("tu");
+        arr.delete("ewerton");
 
         arr.display();                 // mostra os itens da estrutura de novo
     }  // finaliza o método main()
