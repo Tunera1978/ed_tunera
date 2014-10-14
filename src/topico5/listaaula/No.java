@@ -32,6 +32,10 @@ class No
    
    public No getNext(){
        return next;
+   }  
+   public String getNome(){
+       return nome;
    }   
+  
    }  // fim da classe nó
 ////////////////////////////////////////////////////////////////
